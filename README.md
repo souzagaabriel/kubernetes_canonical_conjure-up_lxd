@@ -1,6 +1,10 @@
-# kubernetes_canonical_conjure-up_lxd
+# kubernetes_canonical_single_machine
 
-Baseado em [tutoriais ubuntu](https://tutorials.ubuntu.com/tutorial/install-kubernetes-with-conjure-up?backURL=%2F&_ga=2.107852226.1958800830.1510430718-2088419650.1510430718#0), com adição de alguns pontos que acredito terem faltado no tutorial básico da Canonical.
+Este tutorial irá guiá-lo através da instalação da distribuição da Canonical do Kubernetes em um único host usando [conjure-up](https://conjure-up.io/) em cima de [contêineres LXD](https://linuxcontainers.org/).
+
+Baseado em [tutoriais ubuntu](https://tutorials.ubuntu.com/tutorial/install-kubernetes-with-conjure-up?backURL=%2F&_ga=2.107852226.1958800830.1510430718-2088419650.1510430718#0), com adição de alguns pontos que acredito terem faltado no tutorial da Canonical.
+
+Esse tutorial foi testado no SO Ubuntu 16.04 AMD64 com 16GB de memória RAM.
 
 Primeiramente desinstalar qualquer versão do LXD do repositório:
 ```sh
@@ -46,11 +50,10 @@ sudo snap install conjure-up --classic
 
 Execute o conjure-up:
 ```sh
-conjure-up
+conjure-up canonical-kubernetes
 ```
 
-Escolha a opção "The Canonical Distribution of Kubernetes
-" e ... Esse procedimento é bastante demorado dependendo do hardware utilizado.
+Escolha a opção localhost, a rede criada anteriormente (lxdbr0), a senha de sudo e "Deploy all 6 Remaining Applications".
+Esse procedimento é bastante demorado dependendo do hardware utilizado.
 
-![Conjure-up](conjure-up.png)
  
