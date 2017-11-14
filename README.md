@@ -56,4 +56,13 @@ conjure-up canonical-kubernetes
 Escolha a opção localhost, a rede criada anteriormente (lxdbr0), a senha de sudo e "Deploy all 6 Remaining Applications".
 Esse procedimento é bastante demorado dependendo do hardware utilizado.
 
+ Quando finalizar ele também terá configurado o kubectl, então digite:
+ ```sh
+kubectl config view
+```
+Para pegar o usuário e senha. Após digite: 
  
+ ```sh
+kubectl cluster-info
+```
+E copie o URL do _kubernetes-dashboard_ ou do _Kubernetes master_ (e coloque /ui no final) e cole no navegador do host. Utilize o usuário e senha que você pegou no comando anterior. 
